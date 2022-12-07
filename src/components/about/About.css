@@ -1,0 +1,126 @@
+.About__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.About__me {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+  display: grid;
+  place-items: center;
+}
+
+.About__me-image {
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: var(--transition);
+  margin-bottom: 58px;
+}
+
+.About__me-image:hover {
+  transform: rotate(10deg);
+}
+
+.About__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.About__card {
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.About__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.About__icon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.About__card h5 {
+  font-size: 0.95rem;
+}
+
+.About__card small {
+  font-size: 0.7rem;
+  color: var(--color-light);
+}
+
+.About__content p {
+  margin: 2rem 0 2.6rem;
+  color: var(--color-light);
+}
+
+/* ============(MEDIA QUERIES)=========== */
+@media screen and (max-width: 480px) {
+  .About__me-image {
+    margin-bottom: 41px;
+  }
+  .About__me {
+    width: 60%;
+    margin: 0 auto 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .About__cards {
+    grid-template-columns: 3fr 3fr;
+    gap: 1rem;
+    margin-left: 3px;
+    display: flex;
+  }
+
+  .About__content {
+    text-align: center;
+  }
+  .About__content p {
+    margin: 1.5rem 0;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  a {
+    margin-left: 250px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .About__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .About__me {
+    width: 50%;
+    margin: 2rem auto 4rem;
+  }
+
+  .About__content p {
+    margin: 1rem 0 0.15rem;
+  }
+}
